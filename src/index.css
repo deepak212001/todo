@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    /* --tw-bg-opacity:1;
+    background-color: #211a1a; */
+    background-color: #040404;
+    background-image: url('assets/docs-left.png'), url('assets/docs-right.png');
+    background-position: right top, right left;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.custom-shadow {
+    background-color: rgb(100, 99, 102);
+    border-radius: 10px;
+    box-shadow: 0 20px 15px rgba(0, 0, 0, 0.2), inset 0 2px 2px #939295;
+}
