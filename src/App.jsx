@@ -51,7 +51,7 @@ function App() {
 
   const handleAdd = () => {
     if (todo) {
-      setTodos([...todos, { id: uuidv4(), todo, isComple: false }])
+      setTodos([...todos, { id: uuidv4(), todo, isCompleted: false }])
       setTodo("")
       // console.log(todos)
       saveToLS()
