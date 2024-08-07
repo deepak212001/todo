@@ -84,7 +84,10 @@ function App() {
         <div className="p-5">
           <div className="addTask text-center mb-6 flex">
             {/* <h2 className="text-lg font-bold">Add a Task</h2> */}
-            <input onChange={handleChange} value={todo} type="text" className="w-[80%] rounded-lg px-5 py-1" />
+            <input onChange={handleChange} value={todo} type="text" className="w-[80%] rounded-lg px-5 py-1" onKeyDown={(e) => {
+                if (e.key === "Enter")
+                  handleAdd();
+              }} />
             <button onClick={handleAdd} disabled={todo.length == 0} className="bg-violet-800 hover:bg-violet-950 p-3 py-2 text-white  text-sm font-bold rounded-2xl mx-6 disabled:bg-violet-400">Add</button>
           </div>
           <input onChange={toggleFinished} type="checkbox" checked={showFinish} /> Show Finished
